@@ -23,6 +23,29 @@ def main():
                 speaker, content = line.split(': ', 1)
                 messages.append({'speaker': speaker, 'content': content})
 
+    # Calculate message statistics
+    total_messages = len(messages)
+    user_count = sum(1 for msg in messages if msg['speaker'] == 'User')
+    ai_count = total_messages - user_count
+
+    # Extract keywords from all messages
+    all_words = []
+    for msg in messages:
+        content = msg['content'].translate(str.maketrans('', '', string.punctuation)).lower()
+        for word in content.split():
+            if word not in stop_words:
+                all_words.append(word)
+    top_keywords = [word for word, _ in Counter(all_words).most_common(5)]
+
+    # Extract keywords from user messages for nature line
+    user_words = []
+    for msg in messages:
+        if msg['speaker'] == 'User':
+            content = msg['content'].translate(str.maketrans('', '', string.punctuation)).lower()
+            user_words.extend(word for word in content.split() if word not in stop_words)
+    user_keyword_counts = Counter(user_words)
+    top_user_keywords = [word for word, _ in user_keyword_counts.most_common(2)]
+
     
 
 if __name__ == "__main__":
