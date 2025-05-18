@@ -1,0 +1,6 @@
+User: What tools are used for data analysis?  
+AI: Pandas for data manipulation, Matplotlib for plotting, and SciPy for advanced math.  
+User: Can I analyze large datasets with Python?  
+AI: Yes! Use Dask or PySpark for big data processing.  
+User: What’s a common workflow?  
+AI: Clean data → visualize → build models → iterate.  

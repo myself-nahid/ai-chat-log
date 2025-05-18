@@ -1,0 +1,6 @@
+User: How do I start with web development in Python?  
+AI: Learn frameworks like Django or Flask. Django is great for full-stack apps.  
+User: What about frontend vs. backend?  
+AI: Python handles backend logic. For frontend, you’ll need HTML/CSS/JavaScript.  
+User: Any deployment tools?  
+AI: Heroku or AWS are popular for deploying Python web apps.  

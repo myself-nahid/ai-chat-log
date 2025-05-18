@@ -1,0 +1,6 @@
+User: Explain machine learning.  
+AI: Machine learning (ML) trains algorithms to find patterns in data.  
+User: What’s the difference between supervised and unsupervised learning?  
+AI: Supervised uses labeled data; unsupervised finds hidden patterns in unlabeled data.  
+User: Give a real-world example.  
+AI: Recommender systems (like Netflix) use ML to suggest content.  

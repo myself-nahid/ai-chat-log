@@ -1,0 +1,6 @@
+User: What is Python used for?  
+AI: Python is versatile! You can use it for web development, data analysis, and automation.  
+User: Which libraries are popular for data analysis?  
+AI: Pandas and NumPy are widely used. For visualization, try Matplotlib or Seaborn.  
+User: Thanks!  
+AI: You're welcome!  
