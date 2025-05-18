@@ -46,7 +46,19 @@ def main():
     user_keyword_counts = Counter(user_words)
     top_user_keywords = [word for word, _ in user_keyword_counts.most_common(2)]
 
-    
+    # Generate nature line
+    if len(top_user_keywords) >= 2:
+        nature_line = f"- The user asked mainly about {top_user_keywords[0]} and {top_user_keywords[1]}."
+    elif len(top_user_keywords) == 1:
+        nature_line = f"- The user asked mainly about {top_user_keywords[0]}."
+    else:
+        nature_line = "- The conversation did not contain specific topics from the user."
+
+    # Generate and print the summary
+    print("Summary:")
+    print(f"- The conversation had {total_messages} exchanges.")
+    print(nature_line)
+    print(f"- Most common keywords: {', '.join(top_keywords)}.")
 
 if __name__ == "__main__":
     main()
