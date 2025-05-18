@@ -48,3 +48,35 @@ project/
     ├── discussion1.txt
     └── discussion2.txt
 ```
+
+## 📸 Sample Outputs
+Single File Summary
+Command:
+```
+python chat_summarizer.py --input chat1.txt
+```
+Output:
+```
+Summary for chat1.txt:
+- The conversation had 6 exchanges.
+- The user asked mainly about for and what.
+- Most significant keywords: analysis, python, data, used, automation.
+```
+
+Batch Processing
+Command:
+```
+python chat_summarizer.py --input discussions/
+```
+Output:
+```
+Summary for discussion1.txt:
+- The conversation had 6 exchanges.
+- The user asked mainly about how and do.
+- Most significant keywords: python, frontend, web, apps, backend.
+
+Summary for discussion2.txt:
+- The conversation had 6 exchanges.
+- The user asked mainly about what and tools.
+- Most significant keywords: data, large, matplotlib, math, manipulation.
+```
