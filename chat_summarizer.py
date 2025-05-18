@@ -14,6 +14,15 @@ def main():
         'no', 'yes', 'am', 'pm'
     }
 
+    # Read and parse the chat log
+    messages = []
+    with open(file_path, 'r') as f:
+        for line in f:
+            line = line.strip()
+            if line.startswith('User: ') or line.startswith('AI: '):
+                speaker, content = line.split(': ', 1)
+                messages.append({'speaker': speaker, 'content': content})
+
     
 
 if __name__ == "__main__":
